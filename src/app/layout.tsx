@@ -15,19 +15,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Vinicius Andrade - Desenvolvedor Full Stack",
-  description: "Demosntração de uma landing page usando Next.js",
+  description: "Demonstração de uma landing page usando Next.js",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <AosInit />
       </body>
